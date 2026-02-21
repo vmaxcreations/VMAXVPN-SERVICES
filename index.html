@@ -50,8 +50,14 @@
 <body
     class="bg-vmax-dark text-white font-sans overflow-x-hidden antialiased selection:bg-vmax-cyan selection:text-vmax-dark mesh-bg">
 
+    <!-- Fixed Decorative Border -->
+    <div
+        class="fixed inset-4 pointer-events-none z-[100] rounded-[2rem] border-2 border-vmax-cyan/15 shadow-[inset_0_0_20px_rgba(0,242,254,0.05),_0_0_20px_rgba(0,242,254,0.1)]">
+    </div>
+
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-4 mt-6 mx-4 md:mx-6 rounded-3xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
@@ -87,7 +93,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 w-full glass border-b border-gray-800 backdrop-blur-xl">
+            class="hidden md:hidden absolute top-full left-0 right-0 glass border-t border-white/10 backdrop-blur-xl mt-2 rounded-2xl mx-2 shadow-2xl">
             <div class="px-4 pt-2 pb-6 space-y-4">
                 <a href="index.html" class="block text-vmax-cyan font-medium py-2">Home</a>
                 <a href="features.html" class="block text-gray-300 hover:text-white py-2">Features</a>
@@ -146,8 +152,7 @@
 
                 <div class="relative hidden lg:block reveal">
                     <div class="relative w-full aspect-square animate-float">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000"
-                            alt="Cyber Security"
+                        <img src="hero-vpn.jpeg" alt="VPN Security Network"
                             class="rounded-3xl shadow-[0_0_50px_rgba(0,242,254,0.3)] object-cover w-full h-full border border-vmax-cyan/30">
                         <!-- Floating Badges -->
                         <div
