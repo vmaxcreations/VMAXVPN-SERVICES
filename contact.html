@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | VMAX VPN</title>
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        vmax: {
+                            dark: '#050B14',
+                            gray: '#151C28',
+                            cyan: '#00F2FE',
+                            blue: '#4FACFE',
+                            purple: '#8A2387',
+                            magenta: '#E94057'
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(0, 242, 254, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-vmax-dark text-white font-sans overflow-x-hidden antialiased selection:bg-vmax-cyan selection:text-vmax-dark mesh-bg">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-3xl text-vmax-cyan"></i>
+                        <span class="font-heading font-bold text-2xl tracking-wider text-white">VMAX<span
+                                class="text-vmax-cyan text-gradient">VPN</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="features.html" class="text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="pricing.html" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-vmax-cyan font-medium transition-colors">Contact</a>
+                    <a href="#"
+                        class="px-6 py-2 rounded-full bg-transparent border border-vmax-cyan text-vmax-cyan hover:bg-vmax-cyan hover:text-vmax-dark hover:shadow-neon transition-all duration-300 font-medium">Log
+                        In</a>
+                    <a href="pricing.html"
+                        class="px-6 py-2 rounded-full bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-semibold shadow-neon hover:shadow-lg transition-all duration-300">Get
+                        VMAX</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full glass border-b border-gray-800 backdrop-blur-xl">
+            <div class="px-4 pt-2 pb-6 space-y-4">
+                <a href="index.html" class="block text-gray-300 hover:text-white py-2">Home</a>
+                <a href="features.html" class="block text-gray-300 hover:text-white py-2">Features</a>
+                <a href="pricing.html" class="block text-gray-300 hover:text-white py-2">Pricing</a>
+                <a href="contact.html" class="block text-vmax-cyan font-medium py-2">Contact</a>
+                <div class="pt-4 flex flex-col gap-3">
+                    <a href="#"
+                        class="w-full text-center px-6 py-3 rounded-xl border border-vmax-cyan text-vmax-cyan">Log
+                        In</a>
+                    <a href="pricing.html"
+                        class="w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-bold">Get
+                        VMAX VPN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="pt-40 pb-20 relative border-b border-white/5 bg-gradient-to-b from-vmax-dark to-vmax-gray/20">
+        <div
+            class="absolute top-0 left-0 w-[500px] h-[500px] bg-vmax-purple opacity-10 blur-[150px] rounded-full pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal relative z-10">
+            <h1 class="text-5xl md:text-6xl font-heading font-black mb-6">Get in <span
+                    class="text-gradient">Touch</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">We're here 24/7. Whether you have a question about
+                features, trials, pricing, or connection issues.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16">
+
+            <!-- Contact Info & FAQ Link -->
+            <div class="reveal">
+                <h3 class="text-3xl font-heading font-bold mb-8">How can we help?</h3>
+
+                <div class="grid gap-8 mb-12">
+                    <div
+                        class="flex items-start gap-4 p-6 glass rounded-2xl border-white/5 hover:border-vmax-cyan/30 transition-colors">
+                        <div
+                            class="w-12 h-12 rounded-full bg-vmax-cyan/20 flex items-center justify-center text-vmax-cyan shrink-0 text-xl shadow-[0_0_15px_rgba(0,242,254,0.3)]">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Live Chat Support</h4>
+                            <p class="text-gray-400 text-sm mb-3">Our 24/7 support team is usually responds within 2
+                                minutes.</p>
+                            <a href="#" class="text-vmax-cyan font-medium text-sm hover:underline">Start Chat <i
+                                    class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-start gap-4 p-6 glass rounded-2xl border-white/5 hover:border-vmax-purple/30 transition-colors">
+                        <div
+                            class="w-12 h-12 rounded-full bg-vmax-purple/20 flex items-center justify-center text-vmax-purple shrink-0 text-xl shadow-[0_0_15px_rgba(138,35,135,0.3)]">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Email Us</h4>
+                            <p class="text-gray-400 text-sm mb-3">Drop us a line and we'll reply as soon as possible.
+                            </p>
+                            <a href="mailto:support@vmaxvpn.com"
+                                class="text-vmax-purple font-medium text-sm hover:underline">support@vmaxvpn.com <i
+                                    class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global HQ -->
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase text-sm tracking-widest text-gray-500">Corporate
+                        Headquarters</h4>
+                    <p class="text-gray-400 mb-2"><i class="fa-solid fa-location-dot mr-2 text-vmax-cyan"></i> VMAX VPN
+                        Inc.</p>
+                    <p class="text-gray-400 pl-6 mb-1">Privacy Island, Digital Ocean Blvd.</p>
+                    <p class="text-gray-400 pl-6 mb-1">Panama City, Panama</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="glass-glow p-8 md:p-10 rounded-3xl border border-white/10 reveal delay-100 relative">
+                <div class="absolute -top-1 -right-1 w-20 h-20 bg-vmax-cyan opacity-20 blur-[30px] rounded-full"></div>
+
+                <h3 class="text-2xl font-bold mb-6 relative z-10">Send a Message</h3>
+
+                <form action="#" class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">First Name</label>
+                            <input type="text"
+                                class="w-full bg-vmax-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vmax-cyan focus:ring-1 focus:ring-vmax-cyan transition-all"
+                                placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Last Name</label>
+                            <input type="text"
+                                class="w-full bg-vmax-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vmax-cyan focus:ring-1 focus:ring-vmax-cyan transition-all"
+                                placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                        <input type="email"
+                            class="w-full bg-vmax-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vmax-cyan focus:ring-1 focus:ring-vmax-cyan transition-all"
+                            placeholder="john@example.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Topic</label>
+                        <select
+                            class="w-full bg-vmax-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vmax-cyan focus:ring-1 focus:ring-vmax-cyan transition-all appearance-none cursor-pointer">
+                            <option>Technical Support</option>
+                            <option>Billing Question</option>
+                            <option>Business Partnership</option>
+                            <option>General Investigation</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea rows="5"
+                            class="w-full bg-vmax-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-vmax-cyan focus:ring-1 focus:ring-vmax-cyan transition-all resize-none"
+                            placeholder="How can we help you today?"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-4 rounded-xl bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black text-lg shadow-[0_0_20px_rgba(0,242,254,0.3)] hover:shadow-[0_0_30px_rgba(0,242,254,0.5)] transform hover:-translate-y-1 transition-all duration-300">
+                        Send Message
+                    </button>
+                    <p class="text-xs text-gray-500 text-center mt-4">By sending this message, you agree to our Privacy
+                        Policy.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#03060c] pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-500 text-sm">
+                &copy; 2026 VMAX VPN Service. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

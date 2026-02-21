@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | VMAX VPN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        vmax: {
+                            dark: '#050B14',
+                            gray: '#151C28',
+                            cyan: '#00F2FE',
+                            blue: '#4FACFE',
+                            purple: '#8A2387',
+                            magenta: '#E94057'
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(0, 242, 254, 0.5), 0 0 30px rgba(79, 172, 254, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-vmax-dark text-white font-sans overflow-x-hidden antialiased selection:bg-vmax-cyan selection:text-vmax-dark mesh-bg">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <!-- Reusing identical navbar from index.html -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-3xl text-vmax-cyan"></i>
+                        <span class="font-heading font-bold text-2xl tracking-wider text-white">VMAX<span
+                                class="text-vmax-cyan text-gradient">VPN</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="features.html" class="text-vmax-cyan font-medium transition-colors">Features</a>
+                    <a href="pricing.html" class="text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                    <a href="#"
+                        class="px-6 py-2 rounded-full bg-transparent border border-vmax-cyan text-vmax-cyan hover:bg-vmax-cyan hover:text-vmax-dark hover:shadow-neon transition-all duration-300 font-medium">Log
+                        In</a>
+                    <a href="pricing.html"
+                        class="px-6 py-2 rounded-full bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-semibold shadow-neon hover:shadow-lg transition-all duration-300">Get
+                        VMAX</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full glass border-b border-gray-800 backdrop-blur-xl">
+            <div class="px-4 pt-2 pb-6 space-y-4">
+                <a href="index.html" class="block text-gray-300 hover:text-white py-2">Home</a>
+                <a href="features.html" class="block text-vmax-cyan font-medium py-2">Features</a>
+                <a href="pricing.html" class="block text-gray-300 hover:text-white py-2">Pricing</a>
+                <a href="contact.html" class="block text-gray-300 hover:text-white py-2">Contact</a>
+                <div class="pt-4 flex flex-col gap-3">
+                    <a href="#"
+                        class="w-full text-center px-6 py-3 rounded-xl border border-vmax-cyan text-vmax-cyan">Log
+                        In</a>
+                    <a href="pricing.html"
+                        class="w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-bold">Get
+                        VMAX VPN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="pt-40 pb-20 relative border-b border-white/5 bg-gradient-to-b from-vmax-dark to-vmax-gray/20">
+        <div
+            class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-vmax-cyan opacity-10 blur-[150px] rounded-full pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h1 class="text-5xl md:text-6xl font-heading font-black mb-6">Unrivaled <span
+                    class="text-gradient">Features</span></h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">Discover why VMAX VPN is the ultimate choice for internet
+                privacy, security, and freedom.</p>
+        </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Feature Block 1 -->
+        <div class="flex flex-col lg:flex-row items-center gap-16 mb-32 reveal">
+            <div class="lg:w-1/2">
+                <div
+                    class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(138,35,135,0.2)] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?auto=format&fit=crop&q=80&w=800"
+                        alt="AES Encryption" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-vmax-dark/50 to-transparent"></div>
+                    <div
+                        class="absolute bottom-6 left-6 glass px-4 py-2 rounded-xl border-white/10 flex items-center gap-3">
+                        <i class="fa-solid fa-lock text-green-400"></i>
+                        <span class="font-bold">AES-256 GCM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6">Military-Grade Encryption</h3>
+                <p class="text-gray-400 text-lg mb-6">We use AES with 256-bit keys—the same standard adopted by the U.S.
+                    government and used by security experts worldwide to protect classified information.</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4"><i class="fa-solid fa-check-circle text-vmax-cyan mt-1"></i><span
+                            class="text-gray-300">Perfect Forward Secrecy ensures past sessions remain secure.</span>
+                    </li>
+                    <li class="flex items-start gap-4"><i class="fa-solid fa-check-circle text-vmax-cyan mt-1"></i><span
+                            class="text-gray-300">DNS/IPv6 leak protection built-in.</span></li>
+                    <li class="flex items-start gap-4"><i class="fa-solid fa-check-circle text-vmax-cyan mt-1"></i><span
+                            class="text-gray-300">Automatic Kill Switch aborts internet if connection drops.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Feature Block 2 -->
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-16 mb-32 reveal">
+            <div class="lg:w-1/2">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-6 rounded-2xl border-white/10 text-center shadow-neon">
+                        <i class="fa-solid fa-tv text-4xl text-vmax-cyan mb-4"></i>
+                        <h4 class="font-bold">Smart TV</h4>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-white/10 text-center">
+                        <i class="fa-solid fa-gamepad text-4xl text-vmax-purple mb-4"></i>
+                        <h4 class="font-bold">Consoles</h4>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-white/10 text-center">
+                        <i class="fa-solid fa-mobile-screen text-4xl text-green-400 mb-4"></i>
+                        <h4 class="font-bold">Mobile</h4>
+                    </div>
+                    <div class="glass p-6 rounded-2xl border-white/10 text-center">
+                        <i class="fa-solid fa-laptop text-4xl text-blue-400 mb-4"></i>
+                        <h4 class="font-bold">Desktop</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <h3 class="text-3xl md:text-4xl font-heading font-bold mb-6">Connect Every Device</h3>
+                <p class="text-gray-400 text-lg mb-6">A single VMAX VPN subscription lets you connect up to 10 devices
+                    simultaneously. Protect your entire household with one account.</p>
+                <p class="text-gray-400 text-lg">We offer custom apps for Windows, macOS, Linux, iOS, Android, Android
+                    TV, and router configurations so every byte of data is encrypted.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- More Features Grid -->
+    <div class="bg-vmax-gray/30 py-24 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold">And so much more...</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-2xl reveal">
+                    <i class="fa-solid fa-ban text-3xl text-red-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Ad & Malware Blocker</h4>
+                    <p class="text-gray-400 text-sm">Our CyberSec feature blocks malicious websites, botnets, and
+                        annoying ads automatically.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl reveal delay-100">
+                    <i class="fa-solid fa-ghost text-3xl text-vmax-cyan mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Obfuscated Servers</h4>
+                    <p class="text-gray-400 text-sm">Bypass deep packet inspection and strict firewalls in restrictive
+                        regions. Look like normal traffic.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl reveal delay-200">
+                    <i class="fa-solid fa-arrows-split-up-and-left text-3xl text-vmax-purple mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Split Tunneling</h4>
+                    <p class="text-gray-400 text-sm">Choose which apps use the VPN and which bypass it directly. Total
+                        control over your routing.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl reveal">
+                    <i class="fa-solid fa-server text-3xl text-green-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Dedicated IP</h4>
+                    <p class="text-gray-400 text-sm">Get an IP address that only you use. Avoid CAPTCHAs and access
+                        secure business networks easily.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl reveal delay-100">
+                    <i class="fa-solid fa-headset text-3xl text-yellow-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">24/7 Support</h4>
+                    <p class="text-gray-400 text-sm">Our expert team is available around the clock via live chat and
+                        email to help you set up.</p>
+                </div>
+                <div class="glass p-6 rounded-2xl reveal delay-200">
+                    <i class="fa-solid fa-route text-3xl text-blue-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">WireGuard® Protocol</h4>
+                    <p class="text-gray-400 text-sm">Experience the bleeding edge of VPN technology with our custom
+                        WireGuard implementation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Reuse) -->
+    <footer class="bg-[#03060c] pt-20 pb-10 border-t border-white/5">
+        <!-- Reusing footer content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-500 text-sm">
+                &copy; 2026 VMAX VPN Service. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
