@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 return;
@@ -53,25 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Pricing Toggle
-    const togglePricing = document.getElementById('toggle-pricing');
-    const priceMonthly = document.querySelectorAll('.price-monthly');
-    const priceYearly = document.querySelectorAll('.price-yearly');
-    const periodLabel = document.querySelectorAll('.period-label');
+    // Pricing Tabs
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    if (togglePricing) {
-        togglePricing.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                // Yearly
-                priceMonthly.forEach(p => p.classList.add('hidden'));
-                priceYearly.forEach(p => p.classList.remove('hidden'));
-                periodLabel.forEach(l => l.innerText = '/year');
-            } else {
-                // Monthly
-                priceMonthly.forEach(p => p.classList.remove('hidden'));
-                priceYearly.forEach(p => p.classList.add('hidden'));
-                periodLabel.forEach(l => l.innerText = '/mo');
-            }
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active classes
+                tabButtons.forEach(b => {
+                    b.classList.remove('bg-vmax-cyan', 'text-vmax-dark', 'shadow-neon');
+                    b.classList.add('text-gray-300');
+                });
+                tabContents.forEach(c => c.classList.add('hidden'));
+
+                // Add active classes to clicked
+                btn.classList.add('bg-vmax-cyan', 'text-vmax-dark', 'shadow-neon');
+                btn.classList.remove('text-gray-300');
+
+                const targetId = btn.getAttribute('data-target');
+                document.getElementById(targetId).classList.remove('hidden');
+            });
         });
     }
 });

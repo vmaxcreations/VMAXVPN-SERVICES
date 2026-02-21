@@ -60,7 +60,7 @@
                     <a href="features.html" class="text-gray-300 hover:text-white transition-colors">Features</a>
                     <a href="pricing.html" class="text-vmax-cyan font-medium transition-colors">Pricing</a>
                     <a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                    <a href="#"
+                    <a href="login.html"
                         class="px-6 py-2 rounded-full bg-transparent border border-vmax-cyan text-vmax-cyan hover:bg-vmax-cyan hover:text-vmax-dark hover:shadow-neon transition-all duration-300 font-medium">Log
                         In</a>
                     <a href="pricing.html"
@@ -84,7 +84,7 @@
                 <a href="pricing.html" class="block text-vmax-cyan font-medium py-2">Pricing</a>
                 <a href="contact.html" class="block text-gray-300 hover:text-white py-2">Contact</a>
                 <div class="pt-4 flex flex-col gap-3">
-                    <a href="#"
+                    <a href="login.html"
                         class="w-full text-center px-6 py-3 rounded-xl border border-vmax-cyan text-vmax-cyan">Log
                         In</a>
                     <a href="pricing.html"
@@ -106,22 +106,15 @@
             <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">Risk-free for 30 days. Protect all your devices
                 with a single simple subscription.</p>
 
-            <!-- Pricing Toggle -->
+            <!-- Category Tabs -->
             <div
-                class="flex items-center justify-center gap-4 bg-vmax-gray/40 p-2 rounded-full w-max mx-auto border border-white/5">
-                <span class="text-gray-300 font-medium px-4">Billed Monthly</span>
-                <label class="relative inline-block w-14 h-8 cursor-pointer">
-                    <input type="checkbox" id="toggle-pricing" class="sr-only peer" checked>
-                    <span
-                        class="absolute inset-0 bg-vmax-gray rounded-full border border-white/10 peer-checked:bg-vmax-cyan transition-colors duration-300"></span>
-                    <span
-                        class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-6 flex items-center justify-center shadow-md">
-                        <i class="fa-solid fa-check text-xs text-vmax-dark peer-checked:block hidden"></i>
-                    </span>
-                </label>
-                <span class="text-white font-bold px-4">Billed Yearly <span
-                        class="ml-2 px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 text-xs shadow-[0_0_10px_rgba(74,222,128,0.3)]">Save
-                        60%</span></span>
+                class="flex flex-wrap items-center justify-center gap-4 bg-vmax-gray/40 p-2 rounded-full w-max mx-auto border border-white/5 mb-8">
+                <button data-target="mobile-plans"
+                    class="tab-btn px-6 py-2 rounded-full bg-vmax-cyan text-vmax-dark shadow-neon font-bold transition-all duration-300">Mobile</button>
+                <button data-target="router-plans"
+                    class="tab-btn px-6 py-2 rounded-full text-gray-300 hover:text-white font-bold transition-all duration-300">Router</button>
+                <button data-target="fiber-plans"
+                    class="tab-btn px-6 py-2 rounded-full text-gray-300 hover:text-white font-bold transition-all duration-300">Fiber</button>
             </div>
         </div>
     </div>
@@ -129,19 +122,18 @@
     <!-- Pricing Cards -->
     <div class="pb-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
 
-                <!-- Basic Plan -->
+            <!-- Mobile Plans -->
+            <div id="mobile-plans"
+                class="tab-content grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch max-w-6xl mx-auto">
+                <!-- 100 GB -->
                 <div
-                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-cyan/30 transition-all duration-300 reveal flex flex-col h-full">
-                    <div class="mb-8 border-b border-white/10 pb-8">
-                        <h4 class="text-xl font-bold text-gray-300 mb-2">Basic</h4>
-                        <p class="text-sm text-gray-500 min-h-[40px]">Perfect for occasional browsing and changing
-                            locations.</p>
-                        <div class="mt-6 flex items-baseline gap-1">
-                            <span class="text-4xl font-heading font-bold text-white">$</span>
-                            <span class="text-5xl font-heading font-black text-white price-monthly hidden">11.95</span>
-                            <span class="text-5xl font-heading font-black text-white price-yearly">6.95</span>
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-cyan/30 transition-all duration-300 flex flex-col h-full reveal">
+                    <div class="mb-6 border-b border-white/10 pb-6">
+                        <h4 class="text-xl font-bold text-gray-300 mb-2">100 GB</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span class="text-4xl font-heading font-black text-white">200</span>
                             <span class="text-gray-500 period-label">/mo</span>
                         </div>
                     </div>
@@ -151,88 +143,238 @@
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
                                 class="text-sm">94+ Countries</span></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
-                                class="text-sm">3 Devices Simutaneously</span></li>
-                        <li class="flex items-center gap-3 opacity-50"><i
-                                class="fa-solid fa-xmark text-gray-500"></i><span class="text-sm line-through">Smart TV
-                                Apps</span></li>
-                        <li class="flex items-center gap-3 opacity-50"><i
-                                class="fa-solid fa-xmark text-gray-500"></i><span class="text-sm line-through">CyberSec
-                                Adblocker</span></li>
+                                class="text-sm">Mobile Optimized</span></li>
                     </ul>
                     <a href="#"
-                        class="block w-full text-center px-6 py-4 rounded-xl border border-vmax-cyan text-vmax-cyan font-bold hover:bg-vmax-cyan hover:text-vmax-dark transition-all duration-300">Choose
-                        Basic</a>
+                        class="block w-full text-center px-6 py-3 rounded-xl border border-vmax-cyan text-vmax-cyan font-bold hover:bg-vmax-cyan hover:text-vmax-dark transition-all duration-300">Choose
+                        100 GB</a>
                 </div>
 
-                <!-- Pro Plan (Popular) -->
+                <!-- 200 GB -->
                 <div
-                    class="glass-glow p-8 rounded-[2.5rem] border border-vmax-cyan/50 relative transform md:-translate-y-4 shadow-neon reveal delay-100 flex flex-col h-full z-10">
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-cyan/30 transition-all duration-300 flex flex-col h-full reveal delay-100">
+                    <div class="mb-6 border-b border-white/10 pb-6">
+                        <h4 class="text-xl font-bold text-vmax-cyan mb-2">200 GB</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span class="text-4xl font-heading font-black text-white">300</span>
+                            <span class="text-gray-500 period-label">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Ultra-Fast Servers</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Streaming Support</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Gaming Optimized</span></li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full text-center px-6 py-3 rounded-xl bg-vmax-cyan/10 border border-vmax-cyan text-vmax-cyan font-bold hover:bg-vmax-cyan hover:text-vmax-dark transition-all duration-300">Choose
+                        200 GB</a>
+                </div>
+
+                <!-- 300 GB -->
+                <div
+                    class="glass-glow p-8 rounded-[2rem] border border-vmax-cyan/50 relative shadow-neon flex flex-col h-full z-10 reveal delay-200">
                     <div
-                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black px-4 py-1 rounded-full text-sm uppercase tracking-wider shadow-neon">
-                        Most Popular</div>
-                    <div class="mb-8 border-b border-white/10 pb-8 mt-4">
-                        <h4 class="text-2xl font-bold text-vmax-cyan mb-2">Pro Max</h4>
-                        <p class="text-sm text-gray-400 min-h-[40px]">The ultimate package for digital nomads, gamers &
-                            streamers.</p>
-                        <div class="mt-6 flex items-baseline gap-1">
-                            <span class="text-4xl font-heading font-bold text-white">$</span>
+                        class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black px-4 py-1 rounded-full text-xs uppercase tracking-wider shadow-neon">
+                        Popular</div>
+                    <div class="mb-6 border-b border-white/10 pb-6 mt-2">
+                        <h4 class="text-xl font-bold text-vmax-cyan mb-2">300 GB</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
                             <span
-                                class="text-6xl font-heading font-black text-white drop-shadow-[0_0_15px_rgba(0,242,254,0.5)] price-monthly hidden">14.95</span>
-                            <span
-                                class="text-6xl font-heading font-black text-white drop-shadow-[0_0_15px_rgba(0,242,254,0.5)] price-yearly">4.95</span>
+                                class="text-5xl font-heading font-black text-white drop-shadow-[0_0_15px_rgba(0,242,254,0.5)]">400</span>
                             <span class="text-gray-400 period-label">/mo</span>
                         </div>
-                        <p class="text-green-400 text-xs font-bold mt-2 price-yearly"><i
-                                class="fa-solid fa-bolt mr-1"></i>Billed $59.40 annually</p>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
-                                class="text-sm font-medium">10Gbps Ultra-Fast Servers</span></li>
+                                class="text-sm font-medium">10Gbps Priority</span></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
-                                class="text-sm font-medium">94+ Countries Access</span></li>
+                                class="text-sm font-medium">No speed drops</span></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
-                                class="text-sm font-medium">10 Devices Simutaneously</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
-                                class="text-sm font-medium">Smart TV & Console Apps</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
-                                class="text-sm font-medium">CyberSec Ad & Tracking Block</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
-                                class="text-sm font-medium">P2P Priority Network</span></li>
+                                class="text-sm font-medium">Multiple Devices</span></li>
                     </ul>
                     <a href="#"
-                        class="block w-full text-center px-6 py-4 rounded-xl bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black shadow-[0_0_20px_rgba(0,242,254,0.4)] hover:shadow-[0_0_30px_rgba(0,242,254,0.6)] hover:-translate-y-1 transition-all duration-300">Get
-                        Pro Max</a>
+                        class="block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black shadow-[0_0_15px_rgba(0,242,254,0.4)] hover:shadow-[0_0_25px_rgba(0,242,254,0.6)] hover:-translate-y-1 transition-all duration-300">Choose
+                        300 GB</a>
                 </div>
 
-                <!-- Family Plan -->
+                <!-- Unlimited -->
                 <div
-                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-purple/30 transition-all duration-300 reveal delay-200 flex flex-col h-full">
-                    <div class="mb-8 border-b border-white/10 pb-8">
-                        <h4 class="text-xl font-bold text-vmax-purple mb-2">Family</h4>
-                        <p class="text-sm text-gray-500 min-h-[40px]">Protect the whole household with unlimited
-                            devices.</p>
-                        <div class="mt-6 flex items-baseline gap-1">
-                            <span class="text-4xl font-heading font-bold text-white">$</span>
-                            <span class="text-5xl font-heading font-black text-white price-monthly hidden">19.95</span>
-                            <span class="text-5xl font-heading font-black text-white price-yearly">8.95</span>
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-purple/30 transition-all duration-300 flex flex-col h-full reveal reveal delay-300">
+                    <div class="mb-6 border-b border-white/10 pb-6">
+                        <h4 class="text-xl font-bold text-vmax-purple mb-2">Unlimited</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span class="text-4xl font-heading font-black text-white">500</span>
                             <span class="text-gray-500 period-label">/mo</span>
                         </div>
                     </div>
                     <ul class="space-y-4 mb-8 flex-grow">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
-                                class="text-sm">Pro Max Features included</span></li>
+                                class="text-sm">Infinite Data</span></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
-                                class="text-sm font-bold text-white">Unlimited Devices</span></li>
+                                class="text-sm font-bold text-white">Zero Limits</span></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
-                                class="text-sm">Shared Accounts (Up to 5)</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
-                                class="text-sm">Dedicated IP Optional Addon</span></li>
+                                class="text-sm">Shared Accounts (Opt)</span></li>
                     </ul>
                     <a href="#"
-                        class="block w-full text-center px-6 py-4 rounded-xl border border-vmax-purple text-vmax-purple font-bold hover:bg-vmax-purple hover:text-white transition-all duration-300">Choose
-                        Family</a>
+                        class="block w-full text-center px-6 py-3 rounded-xl border border-vmax-purple text-vmax-purple font-bold hover:bg-vmax-purple hover:text-white transition-all duration-300">Get
+                        Unlimited</a>
                 </div>
             </div>
+
+            <!-- Router Plans -->
+            <div id="router-plans"
+                class="tab-content hidden grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch max-w-6xl mx-auto">
+                <!-- 100 GB -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-cyan/30 transition-all duration-300 flex flex-col h-full">
+                    <div class="mb-6 border-b border-white/10 pb-6">
+                        <h4 class="text-xl font-bold text-gray-300 mb-2">100 GB</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span class="text-4xl font-heading font-black text-white">200</span>
+                            <span class="text-gray-500 period-label">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">High-speed browsing</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">94+ Countries</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Router Config</span></li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full text-center px-6 py-3 rounded-xl border border-vmax-cyan text-vmax-cyan font-bold hover:bg-vmax-cyan hover:text-vmax-dark transition-all duration-300">Choose
+                        100 GB</a>
+                </div>
+
+                <!-- 200 GB -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-cyan/30 transition-all duration-300 flex flex-col h-full">
+                    <div class="mb-6 border-b border-white/10 pb-6">
+                        <h4 class="text-xl font-bold text-vmax-cyan mb-2">200 GB</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span class="text-4xl font-heading font-black text-white">300</span>
+                            <span class="text-gray-500 period-label">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Ultra-Fast Servers</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Streaming Support</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-cyan"></i><span
+                                class="text-sm">Gaming Optimized</span></li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full text-center px-6 py-3 rounded-xl bg-vmax-cyan/10 border border-vmax-cyan text-vmax-cyan font-bold hover:bg-vmax-cyan hover:text-vmax-dark transition-all duration-300">Choose
+                        200 GB</a>
+                </div>
+
+                <!-- 300 GB -->
+                <div
+                    class="glass-glow p-8 rounded-[2rem] border border-vmax-cyan/50 relative shadow-neon flex flex-col h-full z-10">
+                    <div
+                        class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black px-4 py-1 rounded-full text-xs uppercase tracking-wider shadow-neon">
+                        Popular</div>
+                    <div class="mb-6 border-b border-white/10 pb-6 mt-2">
+                        <h4 class="text-xl font-bold text-vmax-cyan mb-2">300 GB</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span
+                                class="text-5xl font-heading font-black text-white drop-shadow-[0_0_15px_rgba(0,242,254,0.5)]">400</span>
+                            <span class="text-gray-400 period-label">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
+                                class="text-sm font-medium">10Gbps Priority</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
+                                class="text-sm font-medium">No speed drops</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-vmax-cyan"></i><span
+                                class="text-sm font-medium">Multiple Devices</span></li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-vmax-cyan to-vmax-blue text-vmax-dark font-black shadow-[0_0_15px_rgba(0,242,254,0.4)] hover:shadow-[0_0_25px_rgba(0,242,254,0.6)] hover:-translate-y-1 transition-all duration-300">Choose
+                        300 GB</a>
+                </div>
+
+                <!-- Unlimited -->
+                <div
+                    class="glass p-8 rounded-3xl border border-white/5 hover:border-vmax-purple/30 transition-all duration-300 flex flex-col h-full">
+                    <div class="mb-6 border-b border-white/10 pb-6">
+                        <h4 class="text-xl font-bold text-vmax-purple mb-2">Unlimited</h4>
+                        <div class="mt-4 flex items-baseline gap-1">
+                            <span class="text-xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span class="text-4xl font-heading font-black text-white">500</span>
+                            <span class="text-gray-500 period-label">/mo</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
+                                class="text-sm">Infinite Data</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
+                                class="text-sm font-bold text-white">Zero Limits</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-vmax-purple"></i><span
+                                class="text-sm">Shared Accounts (Opt)</span></li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full text-center px-6 py-3 rounded-xl border border-vmax-purple text-vmax-purple font-bold hover:bg-vmax-purple hover:text-white transition-all duration-300">Get
+                        Unlimited</a>
+                </div>
+            </div>
+
+            <!-- Fiber Plans -->
+            <div id="fiber-plans" class="tab-content hidden flex justify-center max-w-6xl mx-auto">
+                <div
+                    class="glass-glow p-8 md:p-12 rounded-[2.5rem] border border-vmax-purple/50 relative shadow-neon-purple flex flex-col lg:flex-row items-center justify-between gap-12 w-full max-w-4xl z-10">
+                    <div
+                        class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-vmax-purple to-vmax-magenta text-white font-black px-6 py-1.5 rounded-full text-sm uppercase tracking-wider shadow-neon-purple">
+                        Fiber Exclusive</div>
+
+                    <div class="flex-1 text-center lg:text-left mt-6 lg:mt-0">
+                        <h4 class="text-3xl font-bold text-white mb-2">Unlimited Fiber</h4>
+                        <p class="text-gray-400 mb-6 max-w-md">The ultimate unthrottled experience designed exclusively
+                            for Fiber connections. Maximum bandwidth, zero limitations.</p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3"><i
+                                    class="fa-solid fa-check-circle text-vmax-purple"></i><span
+                                    class="text-sm font-medium">Uncapped Speeds</span></div>
+                            <div class="flex items-center gap-3"><i
+                                    class="fa-solid fa-check-circle text-vmax-purple"></i><span
+                                    class="text-sm font-medium">Ultra-Low Latency</span></div>
+                            <div class="flex items-center gap-3"><i
+                                    class="fa-solid fa-check-circle text-vmax-purple"></i><span
+                                    class="text-sm font-medium">Unlimited Devices</span></div>
+                            <div class="flex items-center gap-3"><i
+                                    class="fa-solid fa-check-circle text-vmax-purple"></i><span
+                                    class="text-sm font-medium">Dedicated IP</span></div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center justify-center p-8 bg-black/30 rounded-3xl border border-white/5 min-w-[250px]">
+                        <div class="flex items-baseline gap-1 mb-6">
+                            <span class="text-2xl font-heading font-bold text-white pr-1">LKR</span>
+                            <span
+                                class="text-6xl font-heading font-black text-white drop-shadow-[0_0_15px_rgba(138,35,135,0.5)]">700</span>
+                            <span class="text-gray-400 period-label">/mo</span>
+                        </div>
+                        <a href="#"
+                            class="block w-full text-center px-8 py-4 rounded-xl bg-gradient-to-r from-vmax-purple to-vmax-magenta text-white font-black shadow-[0_0_20px_rgba(138,35,135,0.4)] hover:shadow-[0_0_30px_rgba(138,35,135,0.6)] hover:-translate-y-1 transition-all duration-300">Get
+                            Fiber Unlimited</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
